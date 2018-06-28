@@ -1,0 +1,80 @@
+* {
+  /border: 1px red solid; /*Use this to check borders, paddings and everything else between elements*/
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+/*color pallete*/
+
+:root {
+  --color1: #F4DC1C;
+  --color2: #080704;
+  --color3: #C1AF17;
+  --color4: #7C6C0C;
+}
+
+#content {
+  display: grid;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+nav {
+  background-color: var(--color1);
+}
+
+header {
+  background-color: var(--color2);
+  color: white;
+}
+
+header h1 {
+  padding: 15px;
+}
+
+.headerContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 15px;
+}
+
+section {
+  background-color: var(--color3);
+  padding: 10px;
+}
+
+section p {
+  font-size: 18px;
+}
+
+.mainInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.netscapeLogo img {
+  width: 400px;
+  height: 100px;
+}
+
+.coders {
+  background-color: var(--color2);
+  color: white;
+}
+
+.codersProfiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer {
+  background-color: var(--color1);
+}
