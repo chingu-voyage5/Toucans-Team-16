@@ -1,5 +1,5 @@
 * {
-  /border: 1px red solid; /*Use this to check borders, paddings and everything else between elements*/
+  border: 1px red solid; /*Use this to check borders, paddings and everything else between elements*/
   padding: 0px;
   margin: 0px;
   font-family: 'Lato', sans-serif;
@@ -14,23 +14,35 @@
   --color4: #7C6C0C;
 }
 
-@media screen and {min-width: 760px
-
-}
 
 #content {
   display: grid;
   margin: 0 auto;
   text-align: center;
+  grid-template-areas:
+  "header"
+  "section"
+  "coders"
+  "footer"
 }
+
+@media screen and (min-width: 760px){
+  #content {
+    display: grid;
+    margin: 0 auto;
+    text-align: center;
+    grid-template-areas:
+    "header"
+    "section"
+    "coders"
+    "footer"
+  }
+}
+
 
 img {
   width: 300px;
   height: 300px;
-}
-
-nav {
-  background-color: var(--color1);
 }
 
 header {
@@ -40,22 +52,50 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  grid-area: header;
 }
 
 header h1 {
   padding: 15px;
 }
 
+
+
+.headerLogo {
+  grid-area: headerLogo;
+}
+
+.headerText {
+  grid-area: headerText;
+}
+
 .headerContent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
   padding: 110px 15px 15px 15px;
+  grid-template-areas:
+  "headerLogo"
+  "headerText"
 }
+
+@media screen and (min-width: 760px) {
+  .headerContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 50px 15px 15px 15px;
+    grid-template-areas:
+    "headerLogo headerText"
+  }
+}
+
+
 
 section {
   background-color: var(--color1);
   padding: 10px;
+  grid-area: section;
 }
 
 section h1 {
@@ -90,6 +130,7 @@ section p {
 .coders {
   background-color: var(--color2);
   color: white;
+  grid-area: coders;
 }
 
 .codersProfiles {
@@ -99,6 +140,7 @@ section p {
 
 footer {
   background-color: var(--color1);
+  grid-area: footer;
 }
 
 footer h3 {
