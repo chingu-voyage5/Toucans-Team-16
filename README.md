@@ -1,2 +1,2 @@
 # Toucans-Team-16
-Add-project-description-here | Voyage-5 | chingu.io
+A Tribute Page to the JavaScript creator | Voyage-5 | chingu.io
